@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "MediatomiOS"
-  s.version      = "2.7.2.1"
+  s.version      = "2.7.2"
   s.summary      = "Mobile App Aggregation Ad SDK of Mediatom SDK for iOS."
   s.description  = <<-DESC
             Mediatom SDK is an advertising aggregation SDK that allows you to monetize iOS applications through Mediatom advertising.
@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   s.xcconfig =   { 'OTHER_LDFLAGS' => ['-lObjC']}
   s.pod_target_xcconfig =   { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i' }
   
-  s.source = { :http => "https://github.com/xiaofu666/MediatomiOS/releases/download/#{s.version}/MediatomiOS_SDK.zip" }
+  s.source = { :http => "https://github.com/xiaofu666/MediatomiOS/releases/download/#{s.version}/MediatomiOS.zip" }
     
   s.default_subspecs = 'MSaas'
 
@@ -149,8 +149,6 @@ Pod::Spec.new do |s|
     ss.dependency 'AnyThinkiOS/AnyThinkPangleAdapter'
     ss.dependency 'AnyThinkiOS/AnyThinkAdmobAdapter'
     ss.dependency 'AnyThinkiOS/AnyThinkFacebookAdapter'
-    ss.dependency 'AnyThinkiOS/AnyThinkVungleAdapter'
-    ss.dependency 'AnyThinkiOS/AnyThinkUnityAdsAdapter'
     ss.dependency 'MediatomiOS/MSaas'
     ss.vendored_frameworks = 'MediatomiOS/SFAdTopOnAdapter.xcframework'
   end

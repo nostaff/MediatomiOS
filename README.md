@@ -3,7 +3,7 @@
 在podfile文件中添加:<br>
 
 	#核心库,必须添加
-	pod 'MediatomiOS/MSaas'
+	pod 'MediatomiOS'
 	#各平台的Adapter
 	#pod 'MediatomiOS/SFAd(平台名)Adapter'
 	#按照您需要支持的平台，按需引入即可
@@ -14,7 +14,7 @@
 
 |network|podCode|
 |---|---|
-|Mediatom| pod 'MSaas' |
+|Mediatom| pod 'MediatomiOS' |
 |穿山甲| pod 'MediatomiOS/SFAdCsjAdapter' |
 |优量汇| pod 'MediatomiOS/SFAdGdtAdapter' |
 |快手联盟| pod 'MediatomiOS/SFAdKsAdapter' |

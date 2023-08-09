@@ -35,6 +35,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 自定义设置用户的GDPR，GDPR是《通用数据保护条例》的缩写，界面仅适用于欧洲。
 @property (nonatomic,readonly) SFGDPRConsentSet dataConsentSet;
 
+/// 大图片的展示样式，默认值为UIViewContentModeScaleAspectFit
+@property (nonatomic) UIViewContentMode contentMode;
+
 /// 国内注册APP id
 + (BOOL)registerAppId:(NSString *)appId;
 /// 海外注册APP id
