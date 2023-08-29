@@ -13,7 +13,7 @@
 ## 使用CocoaPods安装
 
 
-[CocoaPods](https://cocoapods.org) 是Xcode项目中的依赖管理器，它可以自动化并简化您在项目中使用MSaas等第三方库的过程。您可以使用以下命令安装它：
+[CocoaPods](https://cocoapods.org) 是Xcode项目中的依赖管理器，它可以自动化并简化您在项目中使用第三方库的过程。您可以使用以下命令安装它：
 
 ```ruby
 $ gem install cocoapods
@@ -21,7 +21,7 @@ $ gem install cocoapods
 
 ### Podfile
 
-在SDK版本在2.7.2以上版本，支持cocoapod方式引入海外 SDK。<br>
+MediatomiOS SDK 在 V2.7.2 以上版本，支持cocoapod方式引入海外 SDK。<br>
 
 要使用的 CocoaPods MediatomiOS 集成到您的 Xcode 项目，需要您指定它的 **Podfile**:<br>
 
