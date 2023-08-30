@@ -1,5 +1,5 @@
 # MediatomiOS
-***
+
  [![MediatomiOS](https://img.shields.io/badge/MediatomiOS-AD-red.svg)](https://github.com/xiaofu666/MediatomiOS.git)
  [![Travis](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/xiaofu666/MediatomiOS.git)
  [![Language](https://img.shields.io/badge/Language-Objective--C-FF7F24.svg?style=flat)](https://github.com/xiaofu666/MediatomiOS.git)
@@ -7,8 +7,10 @@
  [![CocoaPods](https://img.shields.io/cocoapods/v/MediatomiOS.svg)](https://github.com/xiaofu666/MediatomiOS.git)
  [![开源爱情](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/xiaofu666/MediatomiOS.git)
  [![开源爱情](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/xiaofu666/MediatomiOS.git)
-<br>
-![mediatom.gif](https://upload-images.jianshu.io/upload_images/12555132-205fbc3bdaaef2b7.gif?imageMogr2/auto-orient/strip)
+ 
+***
+
+![mediatom.gif](Logo/mediatom.gif)
 
 ## 使用CocoaPods安装
 
