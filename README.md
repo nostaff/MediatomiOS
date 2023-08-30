@@ -7,8 +7,6 @@
  [![CocoaPods](https://img.shields.io/cocoapods/v/MediatomiOS.svg)](https://github.com/xiaofu666/MediatomiOS.git)
  [![开源爱情](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/xiaofu666/MediatomiOS.git)
  [![开源爱情](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/xiaofu666/MediatomiOS.git)
- 
-***
 
 ![mediatom.gif](Logo/mediatom.gif)
 
