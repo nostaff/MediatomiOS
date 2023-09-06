@@ -1,15 +1,17 @@
 # MediatomiOS
 
- [![Docs-zh](https://shields.io/badge/Docs-%E4%B8%AD%E6%96%87-blue?logo=Read%20The%20Docs)](https://xiaofu666.github.io/static/html/iOS-SDK-对接文档.html)
- [![README-zh](https://shields.io/badge/README-%E4%B8%AD%E6%96%87-blue)](README.md)
- [![FAQ-zh](https://shields.io/badge/FAQ-%E4%B8%AD%E6%96%87-blue?logo=Read%20The%20Docs)](https://xiaofu666.github.io/static/html/iOS-SDK-对接文档.html?#faq)
+ [![Docs-zh](https://shields.io/badge/Docs-中文-blue?logo=Read%20The%20Docs)](https://xiaofu666.github.io/static/html/iOS-SDK-对接文档.html)
+ [![README-zh](https://shields.io/badge/README-中文-blue)](README.md)
+ [![FAQ-zh](https://shields.io/badge/FAQ-中文-blue?logo=Read%20The%20Docs)](https://xiaofu666.github.io/static/html/iOS-SDK-对接文档.html?#faq)
  [![MediatomiOS](https://img.shields.io/badge/MediatomiOS-AD-red.svg)](https://github.com/xiaofu666/MediatomiOS.git)
- [![Travis](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/xiaofu666/MediatomiOS.git)
+ [![Build](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/xiaofu666/MediatomiOS.git)
  [![Language](https://img.shields.io/badge/Language-Objective--C-FF7F24.svg?style=flat)](https://github.com/xiaofu666/MediatomiOS.git)
  [![CocoaPods](https://img.shields.io/cocoapods/p/MediatomiOS.svg)](https://github.com/xiaofu666/MediatomiOS.git)
  [![CocoaPods](https://img.shields.io/cocoapods/v/MediatomiOS.svg)](https://github.com/xiaofu666/MediatomiOS.git)
  [![开源爱情](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/xiaofu666/MediatomiOS.git)
  [![开源爱情](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/xiaofu666/MediatomiOS.git)
+ [![微信](https://img.shields.io/badge/微信-Lurich-green.svg?style=flat)](https://u.wechat.com/EHPxTVDogoJySlhWs9vbKpc)
+ [![邮箱](https://img.shields.io/badge/邮箱-3290235031@qq.com-green.svg?style=flat)](https://qm.qq.com/q/Nbo6sgqD0M)
 
 ![mediatom.gif](Logo/mediatom.gif)
 
