@@ -1,5 +1,8 @@
 # MediatomiOS
 
+ [![Docs-zh](https://shields.io/badge/Docs-%E4%B8%AD%E6%96%87-blue?logo=Read%20The%20Docs)](https://xiaofu666.github.io/static/html/iOS-SDK-对接文档.html)
+ [![README-zh](https://shields.io/badge/README-%E4%B8%AD%E6%96%87-blue)](README.md)
+ [![FAQ-zh](https://shields.io/badge/FAQ-%E4%B8%AD%E6%96%87-blue?logo=Read%20The%20Docs)](https://xiaofu666.github.io/static/html/iOS-SDK-对接文档.html?#faq)
  [![MediatomiOS](https://img.shields.io/badge/MediatomiOS-AD-red.svg)](https://github.com/xiaofu666/MediatomiOS.git)
  [![Travis](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/xiaofu666/MediatomiOS.git)
  [![Language](https://img.shields.io/badge/Language-Objective--C-FF7F24.svg?style=flat)](https://github.com/xiaofu666/MediatomiOS.git)
