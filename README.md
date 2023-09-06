@@ -87,6 +87,7 @@ $ pod install
 $ pod repo update
 ```
 
+更多详情，请阅读[接入文档](https://xiaofu666.github.io/static/html/iOS-SDK-对接文档.html)
 
 ## 作者
 
