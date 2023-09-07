@@ -73,6 +73,7 @@ end
 |Tanx|        pod 'MediatomiOS/SFAdTbAdapter' |
 |UnityAds|    pod 'MediatomiOS/SFAdUnityAdapter' |
 |TopOn|       pod 'MediatomiOS/SFAdTopOnAdapter' |
+|AdApplovin|  pod 'MediatomiOS/SFAdApplovinAdapter' |
 
 
 然后，运行以下命令：
