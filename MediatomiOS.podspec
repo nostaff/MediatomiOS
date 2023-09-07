@@ -1,12 +1,12 @@
 Pod::Spec.new do |s|
   s.name         = "MediatomiOS"
-  s.version      = "2.7.2.1"
+  s.version      = "2.7.2.2"
   s.summary      = "Mobile App Aggregation Ad SDK of Mediatom SDK for iOS."
   s.description  = <<-DESC
             Mediatom SDK is an advertising aggregation SDK that allows you to monetize iOS applications through Mediatom advertising.
                    DESC
   s.homepage     = "https://www.mediatom.cn/dockingdocs/detail?id=70"
-  s.license      = { :type => "MIT", :file => "MediatomiOS/LICENSE" }
+  s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = 'Lurich'
   
   s.platform     = :ios, '11.0'
@@ -116,7 +116,7 @@ Pod::Spec.new do |s|
   
   s.subspec 'SFAdMobAdapter' do |ss|
     ss.ios.deployment_target = '11.0'
-    ss.dependency 'Google-Mobile-Ads-SDK','9.0.0'
+    ss.dependency 'Google-Mobile-Ads-SDK'
     ss.dependency 'PersonalizedAdConsent'
     ss.dependency 'MediatomiOS/MSaas'
     ss.vendored_frameworks = 'MediatomiOS/SFAdMobAdapter.xcframework'
@@ -124,21 +124,21 @@ Pod::Spec.new do |s|
   
   s.subspec 'SFAdMetaAdapter' do |ss|
     ss.ios.deployment_target = '11.0'
-    ss.dependency 'FBAudienceNetwork','6.9.0'
+    ss.dependency 'FBAudienceNetwork'
     ss.dependency 'MediatomiOS/MSaas'
     ss.vendored_frameworks = 'MediatomiOS/SFAdMetaAdapter.xcframework'
   end
   
   s.subspec 'SFAdUnityAdapter' do |ss|
     ss.ios.deployment_target = '11.0'
-    ss.dependency 'UnityAds','4.0.0'
+    ss.dependency 'UnityAds'
     ss.dependency 'MediatomiOS/MSaas'
     ss.vendored_frameworks = 'MediatomiOS/SFAdUnityAdapter.xcframework'
   end
   
   s.subspec 'SFAdVungleAdapter' do |ss|
     ss.ios.deployment_target = '11.0'
-    ss.dependency 'VungleSDK-iOS','6.10.6'
+    ss.dependency 'VungleSDK-iOS'
     ss.dependency 'MediatomiOS/MSaas'
     ss.vendored_frameworks = 'MediatomiOS/SFAdVungleAdapter.xcframework'
   end
@@ -151,6 +151,13 @@ Pod::Spec.new do |s|
     ss.dependency 'AnyThinkiOS/AnyThinkFacebookAdapter'
     ss.dependency 'MediatomiOS/MSaas'
     ss.vendored_frameworks = 'MediatomiOS/SFAdTopOnAdapter.xcframework'
+  end
+  
+  s.subspec 'SFAdApplovinAdapter' do |ss|
+    ss.ios.deployment_target = '11.0'
+    ss.dependency 'AppLovinSDK'
+    ss.dependency 'MediatomiOS/MSaas'
+    ss.vendored_frameworks = 'MediatomiOS/SFAdApplovinAdapter.xcframework'
   end
 
 end
