@@ -61,7 +61,6 @@ end
 |快手联盟|     pod 'MediatomiOS/SFAdKsAdapter' |
 |百青藤|       pod 'MediatomiOS/SFAdBaiduAdapter' |
 |京准通|       pod 'MediatomiOS/SFAdJztAdapter' |
-|GroMore|     pod 'MediatomiOS/SFAdGromoreAdapter' |
 |Beizi|       pod 'MediatomiOS/SFAdBeiziAdapter' |
 |Meishu|      pod 'MediatomiOS/SFAdMsAdapter' |
 |Sigmob|      pod 'MediatomiOS/SFAdSigmobAdapter' |

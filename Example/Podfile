@@ -25,9 +25,6 @@ target 'testPod' do
   # 京准通
   pod 'MediatomiOS/SFAdJztAdapter'
   
-  # GroMore
-  pod 'MediatomiOS/SFAdGromoreAdapter'
-  
   # Beizi
   # pod 'MediatomiOS/SFAdBeiziAdapter'
   
@@ -60,5 +57,8 @@ target 'testPod' do
   
   # TopOn
   # pod 'MediatomiOS/SFAdTopOnAdapter'
+  
+  # Applovin
+  # pod 'MediatomiOS/SFAdApplovinAdapter'
 
 end
