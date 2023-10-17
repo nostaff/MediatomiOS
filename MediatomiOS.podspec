@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
             Mediatom SDK is an advertising aggregation SDK that allows you to monetize iOS applications through Mediatom advertising.
                    DESC
   s.homepage     = "https://www.mediatom.cn/dockingdocs/detail?id=70"
-  s.license      = { :type => "MIT", :file => "LICENSE" }
+  s.license      = { :type => "MIT" }
   s.author       = 'Lurich'
   
   s.platform     = :ios, '11.0'
@@ -33,7 +33,7 @@ Pod::Spec.new do |s|
   s.subspec 'SFAdCsjAdapter' do |ss|
     ss.ios.deployment_target = '11.0'
     ss.dependency 'Ads-Fusion-CN-Beta'
-    ss.dependency 'Ads-Fusion-CN-Beta/CSJMediation',
+    ss.dependency 'Ads-Fusion-CN-Beta/CSJMediation'
     ss.dependency 'MediatomiOS/MSaas'
     ss.vendored_frameworks = 'MediatomiOS/SFAdCsjAdapter.xcframework'
   end
