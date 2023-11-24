@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "MediatomiOS"
-  s.version      = "2.7.3"
+  s.version      = "2.7.4"
   s.summary      = "Mobile App Aggregation Ad SDK of Mediatom SDK for iOS."
   s.description  = <<-DESC
             Mediatom SDK is an advertising aggregation SDK that allows you to monetize iOS applications through Mediatom advertising.
@@ -68,7 +68,7 @@ Pod::Spec.new do |s|
   
   s.subspec 'SFAdBeiziAdapter' do |ss|
     ss.ios.deployment_target = '11.0'
-    ss.dependency 'BeiZiSDK'
+    ss.dependency 'SFBeiZiSDK'
     ss.dependency 'MediatomiOS/MSaas'
     ss.vendored_frameworks = 'MediatomiOS/SFAdBeiziAdapter.xcframework'
   end
@@ -111,7 +111,7 @@ Pod::Spec.new do |s|
   s.subspec 'SFAdMobAdapter' do |ss|
     ss.ios.deployment_target = '11.0'
     ss.dependency 'Google-Mobile-Ads-SDK'
-    ss.dependency 'PersonalizedAdConsent'
+    # ss.dependency 'PersonalizedAdConsent'
     ss.dependency 'MediatomiOS/MSaas'
     ss.vendored_frameworks = 'MediatomiOS/SFAdMobAdapter.xcframework'
   end
@@ -132,7 +132,7 @@ Pod::Spec.new do |s|
   
   s.subspec 'SFAdVungleAdapter' do |ss|
     ss.ios.deployment_target = '11.0'
-    ss.dependency 'VungleSDK-iOS'
+    ss.dependency 'VungleAds'
     ss.dependency 'MediatomiOS/MSaas'
     ss.vendored_frameworks = 'MediatomiOS/SFAdVungleAdapter.xcframework'
   end
@@ -152,6 +152,20 @@ Pod::Spec.new do |s|
     ss.dependency 'AppLovinSDK'
     ss.dependency 'MediatomiOS/MSaas'
     ss.vendored_frameworks = 'MediatomiOS/SFAdApplovinAdapter.xcframework'
+  end
+  
+  s.subspec 'SFAdInmobiAdapter' do |ss|
+    ss.ios.deployment_target = '11.0'
+    ss.dependency 'InMobiSDK/Core'
+    ss.dependency 'MediatomiOS/MSaas'
+    ss.vendored_frameworks = 'MediatomiOS/SFAdInmobiAdapter.xcframework'
+  end
+  
+  s.subspec 'SFAdIronsourceAdapter' do |ss|
+    ss.ios.deployment_target = '11.0'
+    ss.dependency 'IronSourceSDK'
+    ss.dependency 'MediatomiOS/MSaas'
+    ss.vendored_frameworks = 'MediatomiOS/SFAdIronsourceAdapter.xcframework'
   end
 
 end

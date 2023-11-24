@@ -9,9 +9,7 @@
 #import <AppTrackingTransparency/AppTrackingTransparency.h>
 #import "ADInfo.h"
 
-@interface AppDelegate ()<SFSplashDelegate>
-
-@property (nonatomic, strong) SFSplashManager *manager;
+@interface AppDelegate ()
 
 @end
 
@@ -28,60 +26,41 @@
     
     [SFAdSDKManager registerAppId:app_id];
     
-    [self performSelector:@selector(requestIDFA) withObject:nil afterDelay:0.1];
+    [self requestAD];
     return YES;
 }
 
-- (void)requestIDFA {
-   if (@available(iOS 14, *)) {
-       [ATTrackingManager requestTrackingAuthorizationWithCompletionHandler:^(ATTrackingManagerAuthorizationStatus status) {
-           // Tracking authorization completed. Start loading ads here.
-            [self loadSplashAd];
-       }];
-   } else {
-       // Fallback on earlier versions
-       [self loadSplashAd];
-   }
-}
-- (void)loadSplashAd{
-    self.manager = [SFSplashManager new];
-    self.manager.delegate = self;
-    self.manager.mediaId = splash_id;
-    [self.manager loadAdData];
-}
-#pragma mark ADDelegate
-/**
- * 广告数据：加载成功
- */
-- (void)splashAdDidLoad{
-    NSLog(@"开屏广告：加载成功");
-    [self.manager showSplashAdWithWindow:self.window];
-}
-/**
- * 广告数据：加载失败
- * @param error : 错误信息
- */
-- (void)splashAdDidFailed:(NSError *)error{
-    NSLog(@"开屏广告：加载失败 error = %@",error);
-}
-/**
- * 广告视图：点击
- * @param urlStr 媒体自定义广告时，返回的落地页链接
- */
-- (void)splashAdDidClickedWithUrlStr:(NSString *_Nullable)urlStr{
-    NSLog(@"开屏广告：点击");
-}
-/**
- * 落地页或者appstoe返回事件
- */
--(void)splashAdDidCloseOtherController{
-    NSLog(@"开屏广告：落地页或者appstoe返回事件");
-}
-/**
- * 广告视图：关闭
- */
-- (void)splashAdDidShowFinish{
-    NSLog(@"开屏广告：展示完成");
+- (void)requestAD{
+    [self.window showSplashADWithConfig:^(SFSplashADConfig * _Nonnull config) {
+        UIImage *splashBg = [UIImage imageNamed:@"splashBg"];
+        config.mediaID = splash_id;
+        config.backgroundImage = splashBg;
+        config.backgroundColor = [UIColor whiteColor];
+        config.contentMode = UIViewContentModeScaleAspectFit;
+        config.timeout = 3.0;
+        config.bottomView = [[UIImageView alloc] initWithImage:splashBg];
+    } completion:^(SFSplashADType type) {
+        switch (type) {
+            case SFSplashADTypeStart:
+                NSLog(@"Block方式：开始请求广告");
+                break;
+            case SFSplashADTypeLoadAD:
+                NSLog(@"Block方式：广告加载成功");
+                break;
+            case SFSplashADTypeFail:
+                NSLog(@"Block方式：广告加载失败");
+                break;
+            case SFSplashADTypeClick:
+                NSLog(@"Block方式：广告点击");
+                break;
+            case SFSplashADTypeClose:
+                NSLog(@"Block方式：广告关闭");
+                break;
+                
+            default:
+                break;
+        }
+    }];
 }
 
 @end
