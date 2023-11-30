@@ -167,5 +167,12 @@ Pod::Spec.new do |s|
     ss.dependency 'MediatomiOS/MSaas'
     ss.vendored_frameworks = 'MediatomiOS/SFAdIronsourceAdapter.xcframework'
   end
+  
+  s.subspec 'SFAdBigoAdapter' do |ss|
+    ss.ios.deployment_target = '11.0'
+    ss.dependency 'BigoADS'
+    ss.dependency 'MediatomiOS/MSaas'
+    ss.vendored_frameworks = 'MediatomiOS/SFAdBigoAdapter.xcframework'
+  end
 
 end

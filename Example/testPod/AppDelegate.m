@@ -37,7 +37,7 @@
         config.backgroundImage = splashBg;
         config.backgroundColor = [UIColor whiteColor];
         config.contentMode = UIViewContentModeScaleAspectFit;
-        config.timeout = 3.0;
+        config.timeout = 5.0;
         config.bottomView = [[UIImageView alloc] initWithImage:splashBg];
     } completion:^(SFSplashADType type) {
         switch (type) {
