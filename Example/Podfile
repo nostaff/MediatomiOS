@@ -19,47 +19,11 @@ target 'testPod' do
   # 快手联盟
   pod 'MediatomiOS/SFAdKsAdapter'
   
-  # 百青藤
+  # 百度
   pod 'MediatomiOS/SFAdBaiduAdapter'
   
-  # 京准通
+  # 京媒
   pod 'MediatomiOS/SFAdJztAdapter'
-  
-  # Beizi
-  # pod 'MediatomiOS/SFAdBeiziAdapter'
-  
-  # Meishu
-  # pod 'MediatomiOS/SFAdMsAdapter'
-  
-  # Sigmob
-  # pod 'MediatomiOS/SFAdSigmobAdapter'
-  
-  # Mintegral
-  # pod 'MediatomiOS/SFAdMtgAdapter'
-  
-  # Pangle
-  # pod 'MediatomiOS/SFAdPangleAdapter'
-  
-  # AdMob
-  # pod 'MediatomiOS/SFAdMobAdapter'
-  
-  # Meta
-  # pod 'MediatomiOS/SFAdMetaAdapter'
-  
-  # Vungle
-  # pod 'MediatomiOS/SFAdVungleAdapter'
-  
-  # Tanx
-  # pod 'MediatomiOS/SFAdTbAdapter'
-  
-  # UnityAds
-  # pod 'MediatomiOS/SFAdUnityAdapter'
-  
-  # TopOn
-  # pod 'MediatomiOS/SFAdTopOnAdapter'
-  
-  # Applovin
-  # pod 'MediatomiOS/SFAdApplovinAdapter'
 
 end
 post_install do |installer|

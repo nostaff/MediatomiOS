@@ -103,7 +103,7 @@
         [sender setTitle:[NSString stringWithFormat:@"声音控制(有声)"] forState:UIControlStateNormal];
     }
     //声音控制 MSaasGdtEnableSwitchKey：YES：静音； NO：有声
-    [[NSNotificationCenter defaultCenter] postNotificationName:MSaasGdtMuteEnable object:nil userInfo:@{MSaasGdtEnableSwitchKey:@(sender.selected)}];
+    [[NSNotificationCenter defaultCenter] postNotificationName:MSaasVideoMuteEnable object:nil userInfo:@{MSaasVideoEnableSwitchKey:@(sender.selected)}];
 }
 - (void)playEnableWithSender:(UIButton *)sender{
     sender.selected = !sender.selected;
@@ -115,7 +115,7 @@
         self.timer.fireDate = [NSDate distantFuture];
     }
     //播放控制 MSaasGdtEnableSwitchKey：YES：播放； NO：暂停
-    [[NSNotificationCenter defaultCenter] postNotificationName:MSaasGdtPlayEnable object:nil userInfo:@{MSaasGdtEnableSwitchKey:@(sender.selected)}];
+    [[NSNotificationCenter defaultCenter] postNotificationName:MSaasVideoPlayEnable object:nil userInfo:@{MSaasVideoEnableSwitchKey:@(sender.selected)}];
 }
 
 #pragma mark FeedAd delegate
