@@ -1,0 +1,10 @@
+*.md linguist-language=Objective-C
+*.yml linguist-language=Objective-C
+*.html linguist-language=Objective-C
+*.js linguist-language=Objective-C
+*.xml linguist-language=Objective-C
+*.css linguist-language=Objective-C
+*.sql linguist-language=Objective-C
+*.uml linguist-language=Objective-C
+*.cmd linguist-language=Objective-C
+*.gif linguist-language=Objective-C

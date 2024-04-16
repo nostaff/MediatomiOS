@@ -8,22 +8,33 @@ target 'testPod' do
   # Mediatom
   pod 'MediatomiOS'
 
-  # 以下按需导入
-  
-  # 穿山甲
-  pod 'MediatomiOS/SFAdCsjAdapter'
-  
-  # 优量汇
-  pod 'MediatomiOS/SFAdGdtAdapter'
-  
-  # 快手联盟
-  pod 'MediatomiOS/SFAdKsAdapter'
-  
-  # 百度
-  pod 'MediatomiOS/SFAdBaiduAdapter'
-  
-  # 京媒
-  pod 'MediatomiOS/SFAdJztAdapter'
+  # 以下按需导入pod 'MediatomiOS/MSaas', '2.7.6.3'
+        
+      # Adapter插件，根据实际按需拖入:
+      # 穿山甲广告主适配包
+      pod 'MediatomiOS/SFAdCsjAdapter'
+      # 广点通广告主适配包
+      pod 'MediatomiOS/SFAdGdtAdapter'
+      # 快手广告主适配包
+      pod 'MediatomiOS/SFAdKsAdapter'
+      # 京准通广告主适配包
+      pod 'MediatomiOS/SFAdJztAdapter'
+      # 百度广告主适配包
+      pod 'MediatomiOS/SFAdBaiduAdapter'
+       # Mintegral 广告主适配包
+       pod 'MediatomiOS/SFAdMtgAdapter'
+       # AdMob 广告主适配包
+       pod 'MediatomiOS/SFAdMobAdapter'
+       # Vungle 广告主适配包
+       pod 'MediatomiOS/SFAdVungleAdapter'
+       # Meta 广告主适配包
+       pod 'MediatomiOS/SFAdMetaAdapter'
+       # Pangle 广告主适配包
+       pod 'MediatomiOS/SFAdPangleAdapter'
+       # Applovin 广告主适配包
+       pod 'MediatomiOS/SFAdApplovinAdapter'
+       # Inmobi 广告主适配包
+       pod 'MediatomiOS/SFAdInmobiAdapter'
 
 end
 post_install do |installer|

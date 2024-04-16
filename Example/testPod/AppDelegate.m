@@ -25,6 +25,7 @@
     [self.window makeKeyAndVisible];
     
     [SFAdSDKManager registerAppId:app_id];
+    [SFAdSDKManager checkSdkIntegration];
     
     [self requestAD];
     return YES;
