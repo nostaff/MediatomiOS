@@ -60,31 +60,40 @@ end
 |优量汇|       pod 'MediatomiOS/SFAdGdtAdapter' |
 |快手联盟|     pod 'MediatomiOS/SFAdKsAdapter' |
 |百青藤|       pod 'MediatomiOS/SFAdBaiduAdapter' |
-|京准通|       pod 'MediatomiOS/SFAdJztAdapter' |
+|京媒|       	 pod 'MediatomiOS/SFAdJztAdapter' |
+|汇盈|  			 pod 'MediatomiOS/SFAdHrAdapter' |
+|章鱼|  			 pod 'MediatomiOS/SFAdZyAdapter' |
+|天目|  			 pod 'MediatomiOS/SFAdTmAdapter' |
+|优推|  			 pod 'MediatomiOS/SFAdYtAdapter' |
+|科大讯飞|  	 pod 'MediatomiOS/SFAdKdxfAdapter' |
 |Beizi|       pod 'MediatomiOS/SFAdBeiziAdapter' |
 |Meishu|      pod 'MediatomiOS/SFAdMsAdapter' |
+|Tanx|        pod 'MediatomiOS/SFAdTbAdapter' |
 |Sigmob|      pod 'MediatomiOS/SFAdSigmobAdapter' |
 |Mintegral|   pod 'MediatomiOS/SFAdMtgAdapter' |
 |Pangle|      pod 'MediatomiOS/SFAdPangleAdapter' |
 |AdMob|       pod 'MediatomiOS/SFAdMobAdapter' |
 |Meta|        pod 'MediatomiOS/SFAdMetaAdapter' |
 |Vungle|      pod 'MediatomiOS/SFAdVungleAdapter' |
-|Tanx|        pod 'MediatomiOS/SFAdTbAdapter' |
 |UnityAds|    pod 'MediatomiOS/SFAdUnityAdapter' |
-|TopOn|       pod 'MediatomiOS/SFAdTopOnAdapter' |
-|AdApplovin|  pod 'MediatomiOS/SFAdApplovinAdapter' |
+|Inmobi|    	pod 'MediatomiOS/SFAdInmobiAdapter' |
+|Ironsource|  pod 'MediatomiOS/SFAdIronsourceAdapter' |
+|Applovin|  	pod 'MediatomiOS/SFAdApplovinAdapter' |
+|Bigo|  			pod 'MediatomiOS/SFAdBigoAdapter' |
+|TopOn|       pod 'MediatomiOS/SFAdTnAdapter' |
+|TradPlus|    pod 'MediatomiOS/SFAdTpAdapter' |
 
-
-然后，运行以下命令：
-
-```ruby
-$ pod install
-```
 
 更新SDK至最新版本，运行以下命令：
 
 ```ruby
 $ pod repo update
+```
+
+然后下载安装SDK，运行以下命令：
+
+```ruby
+$ pod install
 ```
 
 更多详情，请阅读[接入文档](https://xiaofu666.github.io/static/html/iOS-SDK-对接文档.html)

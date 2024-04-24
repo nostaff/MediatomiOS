@@ -9,7 +9,9 @@
 #import <AppTrackingTransparency/AppTrackingTransparency.h>
 #import "ADInfo.h"
 
-@interface AppDelegate ()
+@interface AppDelegate ()<SFSplashDelegate>
+
+@property (nonatomic, strong) SFSplashManager *manager;
 
 @end
 
@@ -25,7 +27,6 @@
     [self.window makeKeyAndVisible];
     
     [SFAdSDKManager registerAppId:app_id];
-    [SFAdSDKManager checkSdkIntegration];
     
     [self requestAD];
     return YES;
@@ -35,15 +36,15 @@
     [self.window sf_showSplashADWithConfig:^(SFSplashADConfig * _Nonnull config) {
         UIImage *splashBg = [UIImage imageNamed:@"splashBg"];
         config.mediaID = splash_id;
+        config.timeout = 5;
         config.backgroundImage = splashBg;
         config.backgroundColor = [UIColor whiteColor];
         config.contentMode = UIViewContentModeScaleAspectFit;
-        config.timeout = 5.0;
         config.bottomView = [[UIImageView alloc] initWithImage:splashBg];
     } completion:^(SFSplashADType type, NSError *error) {
         switch (type) {
             case SFSplashADTypeStart:
-                NSLog(@"Block方式：开始广告流程开始");
+                NSLog(@"Block方式：开屏广告请求流程开启");
                 break;
             case SFSplashADTypeRequestAD:
                 NSLog(@"Block方式：开始请求广告");
@@ -61,7 +62,7 @@
                 NSLog(@"Block方式：广告点击");
                 break;
             case SFSplashADTypeClose:
-                NSLog(@"Block方式：开始广告流程结束");
+                NSLog(@"Block方式：广告关闭");
                 break;
                 
             default:

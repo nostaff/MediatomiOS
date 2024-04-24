@@ -32,7 +32,7 @@
     NSLog(@"插屏广告请求");
     self.interstitialAd = [SFInterstitialManager new];
     self.interstitialAd.mediaId = interstitial_id;
-    self.interstitialAd.showAdController = self.navigationController;
+    self.interstitialAd.showAdController = self;
     self.interstitialAd.delegate = self;
     [self.interstitialAd loadAdData];
 }
@@ -65,7 +65,7 @@
 /**
  * 广告视图：关闭
  */
-- (void)interstitialAdDidClose{
+- (void)interstitialAdDidAutoClose:(BOOL)autoClose{
     NSLog(@"插屏广告关闭");
 }
 

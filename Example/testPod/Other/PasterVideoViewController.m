@@ -102,7 +102,7 @@
     } else {
         [sender setTitle:[NSString stringWithFormat:@"声音控制(有声)"] forState:UIControlStateNormal];
     }
-    //声音控制 MSaasGdtEnableSwitchKey：YES：静音； NO：有声
+    //声音控制 MSaasVideoEnableSwitchKey：YES：静音； NO：有声
     [[NSNotificationCenter defaultCenter] postNotificationName:MSaasVideoMuteEnable object:nil userInfo:@{MSaasVideoEnableSwitchKey:@(sender.selected)}];
 }
 - (void)playEnableWithSender:(UIButton *)sender{
@@ -114,7 +114,7 @@
         [sender setTitle:[NSString stringWithFormat:@"播放控制(暂停)"] forState:UIControlStateNormal];
         self.timer.fireDate = [NSDate distantFuture];
     }
-    //播放控制 MSaasGdtEnableSwitchKey：YES：播放； NO：暂停
+    //播放控制 MSaasVideoEnableSwitchKey：YES：播放； NO：暂停
     [[NSNotificationCenter defaultCenter] postNotificationName:MSaasVideoPlayEnable object:nil userInfo:@{MSaasVideoEnableSwitchKey:@(sender.selected)}];
 }
 

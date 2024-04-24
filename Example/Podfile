@@ -8,33 +8,86 @@ target 'testPod' do
   # Mediatom
   pod 'MediatomiOS'
 
-  # 以下按需导入pod 'MediatomiOS/MSaas', '2.7.6.3'
-        
-      # Adapter插件，根据实际按需拖入:
-      # 穿山甲广告主适配包
-      pod 'MediatomiOS/SFAdCsjAdapter'
-      # 广点通广告主适配包
-      pod 'MediatomiOS/SFAdGdtAdapter'
-      # 快手广告主适配包
-      pod 'MediatomiOS/SFAdKsAdapter'
-      # 京准通广告主适配包
-      pod 'MediatomiOS/SFAdJztAdapter'
-      # 百度广告主适配包
-      pod 'MediatomiOS/SFAdBaiduAdapter'
-       # Mintegral 广告主适配包
-       pod 'MediatomiOS/SFAdMtgAdapter'
-       # AdMob 广告主适配包
-       pod 'MediatomiOS/SFAdMobAdapter'
-       # Vungle 广告主适配包
-       pod 'MediatomiOS/SFAdVungleAdapter'
-       # Meta 广告主适配包
-       pod 'MediatomiOS/SFAdMetaAdapter'
-       # Pangle 广告主适配包
-       pod 'MediatomiOS/SFAdPangleAdapter'
-       # Applovin 广告主适配包
-       pod 'MediatomiOS/SFAdApplovinAdapter'
-       # Inmobi 广告主适配包
-       pod 'MediatomiOS/SFAdInmobiAdapter'
+  # 以下按需导入
+  
+  # 穿山甲
+  # pod 'MediatomiOS/SFAdCsjAdapter'
+  
+  # 优量汇
+  # pod 'MediatomiOS/SFAdGdtAdapter'
+  
+  # 快手联盟
+  # pod 'MediatomiOS/SFAdKsAdapter'
+  
+  # 百度
+  # pod 'MediatomiOS/SFAdBaiduAdapter'
+  
+  # 京准通
+  # pod 'MediatomiOS/SFAdJztAdapter'
+  
+  # 汇盈
+  # pod 'MediatomiOS/SFAdHrAdapter'
+  
+  # 天目
+  # pod 'MediatomiOS/SFAdTmAdapter'
+  
+  # 章鱼
+  # pod 'MediatomiOS/SFAdZyAdapter'
+  
+  # 优推
+  # pod 'MediatomiOS/SFAdYtAdapter'
+  
+  # 科大讯飞
+  # pod 'MediatomiOS/SFAdKdxfAdapter'
+  
+  # Beizi
+  # pod 'MediatomiOS/SFAdBeiziAdapter'
+  
+  # Meishu
+  # pod 'MediatomiOS/SFAdMsAdapter'
+  
+  # Sigmob
+  # pod 'MediatomiOS/SFAdSigmobAdapter'
+  
+  # Mintegral
+  # pod 'MediatomiOS/SFAdMtgAdapter'
+  
+  # Pangle
+  # pod 'MediatomiOS/SFAdPangleAdapter'
+  
+  # AdMob
+  # pod 'MediatomiOS/SFAdMobAdapter'
+  
+  # Meta
+  # pod 'MediatomiOS/SFAdMetaAdapter'
+  
+  # Vungle
+  # pod 'MediatomiOS/SFAdVungleAdapter'
+  
+  # Tanx
+  # pod 'MediatomiOS/SFAdTbAdapter'
+  
+  # UnityAds
+  # pod 'MediatomiOS/SFAdUnityAdapter'
+  
+  # Applovin
+  # pod 'MediatomiOS/SFAdApplovinAdapter'
+
+  # Ironsource
+  # pod 'MediatomiOS/SFAdIronsourceAdapter'
+
+  # Inmobi
+  # pod 'MediatomiOS/SFAdInmobiAdapter'
+
+  # Bigo
+  # pod 'MediatomiOS/SFAdBigoAdapter'
+  
+  # TopOn
+  # pod 'MediatomiOS/SFAdTnAdapter'
+  
+  # TradPlus
+  # pod 'MediatomiOS/SFAdTpAdapter'
+ 
 
 end
 post_install do |installer|

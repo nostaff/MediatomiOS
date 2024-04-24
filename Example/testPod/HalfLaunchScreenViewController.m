@@ -30,8 +30,6 @@
     });
     
     [self.view addSubview:launchScreenBtn];
-    // Do any additional setup after loading the view from its nib.
-//    [self launchScreenBtnClicked:nil];
 }
 - (void)halfLaunchScreenBtnClicked:(UIButton*)sender
 {
