@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "MediatomiOS"
-  s.version      = "2.7.7.1"
+  s.version      = "2.7.7.2"
   s.summary      = "Mobile App Aggregation Ad SDK of Mediatom SDK for iOS."
   s.description  = <<-DESC
             Mediatom SDK is an advertising aggregation SDK that allows you to monetize iOS applications through Mediatom advertising.
@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
   
   s.subspec 'SFAdCsjAdapter' do |ss|
     ss.ios.deployment_target = '11.0'
-    ss.dependency 'Ads-Fusion-CN-Beta'
+    ss.dependency 'Ads-Fusion-CN-Beta/BUAdSDK'
     ss.dependency 'Ads-Fusion-CN-Beta/CSJMediation'
     ss.dependency 'MediatomiOS/MSaas'
     ss.vendored_frameworks = 'MediatomiOS/SFAdCsjAdapter.xcframework'
@@ -68,7 +68,7 @@ Pod::Spec.new do |s|
   
   s.subspec 'SFAdBeiziAdapter' do |ss|
     ss.ios.deployment_target = '11.0'
-    ss.dependency 'SFBeiZiSDK'
+    ss.dependency 'BeiZiSDK-iOS/BeiZiSDK-iOS'
     ss.dependency 'MediatomiOS/MSaas'
     ss.vendored_frameworks = 'MediatomiOS/SFAdBeiziAdapter.xcframework'
   end
@@ -146,6 +146,9 @@ Pod::Spec.new do |s|
     ss.dependency 'AnyThinkiOS/AnyThinkMintegralAdapter', '6.3.20'
     ss.dependency 'GoogleMobileAdsMediationMintegral', '7.5.7.0'
     ss.dependency 'MediatomiOS/MSaas'
+    ss.dependency 'MediatomiOS/SFAdTnAdapter'
+    ss.dependency 'MediatomiOS/SFAdTpAdapter'
+    ss.dependency 'MediatomiOS/SFAdApplovinAdapter'
     ss.vendored_frameworks = 'MediatomiOS/SFAdMtgAdapter.xcframework'
   end
   
@@ -157,6 +160,9 @@ Pod::Spec.new do |s|
     ss.dependency 'AnyThinkPangleSDKAdapter', '6.3.20.1'
     ss.dependency 'GoogleMobileAdsMediationPangle', '5.8.0.8.0'
     ss.dependency 'MediatomiOS/MSaas'
+    ss.dependency 'MediatomiOS/SFAdTnAdapter'
+    ss.dependency 'MediatomiOS/SFAdTpAdapter'
+    ss.dependency 'MediatomiOS/SFAdApplovinAdapter'
     ss.vendored_frameworks = 'MediatomiOS/SFAdPangleAdapter.xcframework'
   end
   
@@ -168,6 +174,9 @@ Pod::Spec.new do |s|
     ss.dependency 'AnyThinkiOS/AnyThinkFacebookAdapter', '6.3.20'
     ss.dependency 'GoogleMobileAdsMediationFacebook', '6.15.0.0'
     ss.dependency 'MediatomiOS/MSaas'
+    ss.dependency 'MediatomiOS/SFAdTnAdapter'
+    ss.dependency 'MediatomiOS/SFAdTpAdapter'
+    ss.dependency 'MediatomiOS/SFAdApplovinAdapter'
     ss.vendored_frameworks = 'MediatomiOS/SFAdMetaAdapter.xcframework'
   end
   
@@ -179,6 +188,9 @@ Pod::Spec.new do |s|
     ss.dependency 'AnyThinkiOS/AnyThinkVungleAdapter', '6.3.20'
     ss.dependency 'GoogleMobileAdsMediationVungle', '7.2.2.1'
     ss.dependency 'MediatomiOS/MSaas'
+    ss.dependency 'MediatomiOS/SFAdTnAdapter'
+    ss.dependency 'MediatomiOS/SFAdTpAdapter'
+    ss.dependency 'MediatomiOS/SFAdApplovinAdapter'
     ss.vendored_frameworks = 'MediatomiOS/SFAdVungleAdapter.xcframework'
   end
   
@@ -190,6 +202,9 @@ Pod::Spec.new do |s|
     ss.dependency 'AnyThinkiOS/AnyThinkInmobiAdapter', '6.3.20'
     ss.dependency 'GoogleMobileAdsMediationInMobi', '10.7.1.0'
     ss.dependency 'MediatomiOS/MSaas'
+    ss.dependency 'MediatomiOS/SFAdTnAdapter'
+    ss.dependency 'MediatomiOS/SFAdTpAdapter'
+    ss.dependency 'MediatomiOS/SFAdApplovinAdapter'
     ss.vendored_frameworks = 'MediatomiOS/SFAdInmobiAdapter.xcframework'
   end
   
@@ -200,6 +215,9 @@ Pod::Spec.new do |s|
     ss.dependency 'TradPlusAdSDK/AdMobAdapter', '11.2.0'
     ss.dependency 'AnyThinkiOS/AnyThinkAdmobAdapter', '6.3.20'
     ss.dependency 'MediatomiOS/MSaas'
+    ss.dependency 'MediatomiOS/SFAdTnAdapter'
+    ss.dependency 'MediatomiOS/SFAdTpAdapter'
+    ss.dependency 'MediatomiOS/SFAdApplovinAdapter'
     ss.vendored_frameworks = 'MediatomiOS/SFAdMobAdapter.xcframework'
   end
   
@@ -208,8 +226,10 @@ Pod::Spec.new do |s|
     ss.dependency 'AppLovinSDK', '12.3.1'
     ss.dependency 'TradPlusAdSDK/AppLovinAdapter', '11.2.0'
     ss.dependency 'AnyThinkiOS/AnyThinkApplovinAdapter', '6.3.20'
-    ss.dependency 'SFGAppLovinAdapter', '12.3.1.0'
+    ss.dependency 'SFGAppLovinAdapter'
     ss.dependency 'MediatomiOS/MSaas'
+    ss.dependency 'MediatomiOS/SFAdTnAdapter'
+    ss.dependency 'MediatomiOS/SFAdTpAdapter'
     ss.vendored_frameworks = 'MediatomiOS/SFAdApplovinAdapter.xcframework'
   end
   
