@@ -9,11 +9,12 @@
 #import "NativeAdTableViewCell.h"
 #import "ADInfo.h"
 
-@interface NativeAdTableViewCell ()<SFNativeDelegate>
+@interface NativeAdTableViewCell ()<SFNativeDelegate, SFNativeAdRenderProtocol>
 
 @property (nonatomic, strong) SFNativeManager *nativeManager;
 @property (nonatomic, strong) SFFeedAdData *adData;
-@property (nonatomic, strong) SFTemplateAdView *adView;
+@property (nonatomic, strong) UIView<SFNativeAdRenderProtocol> *adView;
+@property (nonatomic, assign) BOOL isSelfRender;
 
 @end
 
@@ -55,20 +56,14 @@
         [self addSubview:adData.adView];
     } else {
         adData.isRenderImage = YES;
-        /*
-           图文混合 SFTemplateStyleDefault  = 0,  // 默认样式
-           文字浮层 SFTemplateStyleNest     = 1,
-           上文下图 SFTemplateStyleTTBI     = 2,
-           上图下文 SFTemplateStyleTIBT     = 3,
-           左文右图 SFTemplateStyleLTRI     = 4,
-           左图右文 SFTemplateStyleLIRT     = 5,
-           纯图展示 SFTemplateStyleImage    = 6,
-         */
-        /// 使用 SDK 自带模版渲染广告示例（国内广告需自己额外添加一个关闭广告按钮）
-        SFTemplateAdView *adView = [[SFTemplateAdView alloc] initWithFrame:CGRectMake(0, 0, self.adBackView.frame.size.width, 0) Model:adData Style:SFTemplateStyleLIRT LRMargin:0 TBMargin:0];
-        [self.adBackView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
-        [self.adBackView addSubview:adView];
-        self.adView = adView;
+        self.isSelfRender = YES;
+        if (self.isSelfRender) {
+            // 媒体自渲染
+            [self useSelfRenderStyle];
+        } else {
+            // 使用内置模板自渲染
+            [self useSDKTemplateStyle];
+        }
     }
     NSLog(@"getCurrentBaseEcpmInfo = %@",[self.nativeManager getCurrentBaseEcpmInfo]);
     if (self.successBlock) {
@@ -82,14 +77,57 @@
         [self.nativeManager registerAdForView:self.adView adData:self.adData];
     }
 }
+- (void)useSelfRenderStyle{
+    self.adView = self;
+    [self.clickButton setTitle:self.adData.buttonText forState:UIControlStateNormal];
+    self.contentLabel.text = self.adData.adContent;
+    self.titleLabel.text = self.adData.adTitle;
+    self.adLogo.image = self.adData.logo;
+}
+// 实现代理
+// 广告主视图
+- (UIView *)mainAdView{
+    return self.adBackView;
+}
+// 广告图
+- (UIImageView *)mainImageView{
+    return self.mainAdImageView;
+}
+// 可点击view的数组
+- (NSArray *)clickViewArray{
+    return @[self];
+}
+- (void)useSDKTemplateStyle{
+    /*
+       图文混合 SFTemplateStyleDefault  = 0,  // 默认样式
+       文字浮层 SFTemplateStyleNest     = 1,
+       上文下图 SFTemplateStyleTTBI     = 2,
+       上图下文 SFTemplateStyleTIBT     = 3,
+       左文右图 SFTemplateStyleLTRI     = 4,
+       左图右文 SFTemplateStyleLIRT     = 5,
+       纯图展示 SFTemplateStyleImage    = 6,
+     */
+    /// 使用 SDK 自带模版渲染广告示例（国内广告需自己额外添加一个关闭广告按钮）
+    SFTemplateAdView *adView = [[SFTemplateAdView alloc] initWithFrame:CGRectMake(0, 0, self.adBackView.frame.size.width, 0) Model:self.adData Style:SFTemplateStyleLIRT LRMargin:0 TBMargin:0];
+    [self.adBackView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    [self.adBackView addSubview:adView];
+    self.adView = adView;
+}
 - (CGFloat)cellHeight{
     if (self.adData.adView) {
         CGFloat cellHeight = self.adData.adView.bounds.size.height;
         return cellHeight;
     } else {
         /// 使用 SDK 模版渲染示例 (广告高度+cell 上下间距)
-        CGFloat cellHeight = self.adView.bounds.size.height + 20;
-        return cellHeight;
+        if (self.isSelfRender) {
+            // 媒体自渲染
+            CGFloat cellHeight = 250;
+            return cellHeight;
+        } else {
+            // 使用内置模板自渲染
+            CGFloat cellHeight = self.adView.bounds.size.height + 20;
+            return cellHeight;
+        }
     }
 }
 /**

@@ -41,8 +41,8 @@
         config.backgroundColor = [UIColor whiteColor];
         config.contentMode = UIViewContentModeScaleAspectFit;
         config.bottomView = [[UIImageView alloc] initWithImage:splashBg];
-    } completion:^(SFSplashADType type, NSError *error) {
-        switch (type) {
+    } completion:^(SFSplashResultInfo * _Nonnull result) {
+        switch (result.type) {
             case SFSplashADTypeStart:
                 NSLog(@"Block方式：开屏广告请求流程开启");
                 break;
@@ -50,10 +50,10 @@
                 NSLog(@"Block方式：开始请求广告");
                 break;
             case SFSplashADTypeLoadAD:
-                NSLog(@"Block方式：广告加载成功");
+                NSLog(@"Block方式：广告加载成功 %@", result.info);
                 break;
             case SFSplashADTypeFail:
-                NSLog(@"Block方式：广告加载失败");
+                NSLog(@"Block方式：广告加载失败 %@", result.error);
                 break;
             case SFSplashADTypeShow:
                 NSLog(@"Block方式：广告展示");

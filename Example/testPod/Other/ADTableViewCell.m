@@ -9,7 +9,7 @@
 #import "ADTableViewCell.h"
 #import "ADInfo.h"
 
-@interface ADTableViewCell ()<SFFeedDelegate>
+@interface ADTableViewCell ()<SFFeedDelegate, SFNativeAdRenderProtocol>
 
 @property (nonatomic, strong) SFFeedManager *feedManager;
 @property (nonatomic, strong) SFFeedAdData *adData;
@@ -40,6 +40,23 @@
     self.feedManager = feedManager;
 }
 
+- (void)registerAdView{
+    self.feedManager.showAdController = self.showAdController;
+    [self.feedManager registerAdForView:self adData:self.adData];
+}
+
+// 广告主视图
+- (UIView *)mainAdView{
+    return self.contentView;
+}
+// 广告图
+- (UIImageView *)mainImageView{
+    return self.adImageView;
+}
+// 可点击view的数组
+- (NSArray *)clickViewArray{
+    return @[self.contentView];
+}
 #pragma mark FeedAd delegate
 /**
  * 广告数据：加载成功
@@ -63,10 +80,6 @@
     if (self.successBlock) {
         self.successBlock();
     }
-}
-- (void)registerAdView{
-    self.feedManager.showAdController = self.showAdController;
-    [self.feedManager registerAdViewForBindImage:self.adImageView adData:self.adData clickableViews:@[self]];
 }
 /**
  * 广告数据：加载失败
