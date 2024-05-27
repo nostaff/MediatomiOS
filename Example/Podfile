@@ -6,7 +6,7 @@ target 'testPod' do
   use_frameworks!
 
   # Mediatom
-  pod 'MediatomiOS', '~> 2.7.7.6'
+  pod 'MediatomiOS', '~> 2.7.7.7'
 
   # 以下按需导入
   
