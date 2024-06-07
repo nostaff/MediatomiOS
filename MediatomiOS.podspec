@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "MediatomiOS"
-  s.version      = "2.7.7.7"
+  s.version      = "2.7.7.9"
   s.summary      = "Mobile App Aggregation Ad SDK of Mediatom SDK for iOS."
   s.description  = <<-DESC
             Mediatom SDK is an advertising aggregation SDK that allows you to monetize iOS applications through Mediatom advertising.
@@ -247,6 +247,17 @@ Pod::Spec.new do |s|
     ss.vendored_frameworks = 'MediatomiOS/SFAdApplovinAdapter.xcframework'
   end
   
+  s.subspec 'SFAdBigoAdapter' do |ss|
+    ss.ios.deployment_target = '11.0'
+    ss.dependency 'BigoADS', '4.2.3'
+    ss.dependency 'TradPlusAdSDK/BigoAdapter', '11.3.0'
+    ss.dependency 'TPNBigoSDKAdapter', '6.3.50.2'
+    ss.dependency 'MediatomiOS/MSaas'
+    ss.dependency 'MediatomiOS/SFAdTnAdapter'
+    ss.dependency 'MediatomiOS/SFAdTpAdapter'
+    ss.vendored_frameworks = 'MediatomiOS/SFAdBigoAdapter.xcframework'
+  end
+  
   s.subspec 'SFAdTnAdapter' do |ss|
     ss.ios.deployment_target = '11.0'
     ss.dependency 'TPNiOS','6.3.50'
@@ -264,13 +275,6 @@ Pod::Spec.new do |s|
   
   
   
-  
-  s.subspec 'SFAdBigoAdapter' do |ss|
-    ss.ios.deployment_target = '11.0'
-    ss.dependency 'BigoADS', '4.2.3'
-    ss.dependency 'MediatomiOS/MSaas'
-    ss.vendored_frameworks = 'MediatomiOS/SFAdBigoAdapter.xcframework'
-  end
   
   s.subspec 'SFAdUnityAdapter' do |ss|
     ss.ios.deployment_target = '11.0'
